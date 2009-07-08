@@ -1,0 +1,3 @@
+Our attempt to migrate to using the still-nascent boost logging
+framework, which is header-only. 
+
