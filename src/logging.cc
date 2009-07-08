@@ -14,8 +14,6 @@ int config_logging(po::variables_map vm, std::string LOGROOT) {
     
   } 
   
-  log4cpp::Category& logrecorder = log4cpp::Category::getInstance(LOGROOT);
-  log4cpp::Category& logdbus = log4cpp::Category::getInstance(LOGROOT + ".dbus");
   log4cpp::Priority::Value loglevel = log4cpp::Priority::WARN; 
 
   int custlevel; 
@@ -40,7 +38,7 @@ po::options_description logging_desc()
   po::options_description loggingdesc("Logging options");
   loggingdesc.add_options()
     ("log-properties", po::value<string>(), "A custom log configuration file")
-    ("log-level", po::value<int>()->default_value(400), 
+    ("log-level", po::value<int>()->default_value(3), 
      "The minimum log level to log to standard out; 0=lowest (log everything), 9 =highest (log nothing)"); 
 
   return loggingdesc; 
