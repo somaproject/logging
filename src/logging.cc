@@ -1,6 +1,6 @@
 #include "logging.h"
 
-boost::logging::level lt = log_type_parse(std::string l)
+boost::logging::level::type log_level_parse(std::string l)
 {
   if (l == "debug") {
     return boost::logging::level::debug;
@@ -21,5 +21,7 @@ boost::logging::level lt = log_type_parse(std::string l)
   if (l == "fatal") {
     return boost::logging::level::fatal;
   }
+  
+  throw std::runtime_error("unparseable logging level"); 
 
 }

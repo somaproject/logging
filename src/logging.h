@@ -4,7 +4,7 @@
 #include <boost/logging/format_fwd.hpp>
 #include <boost/logging/format/named_write.hpp>
 
-boost::logging::level lt = log_type_parse(std::string l);
+boost::logging::level::type log_level_parse(std::string l);
 
 
 #endif // LOGGING_H
